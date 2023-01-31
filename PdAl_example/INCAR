@@ -1,0 +1,36 @@
+# VASP INCAR Template
+
+# General Parameters/Electronic Relaxation
+PREC =Accurate  # Precision
+ENCUT = 501     # cutoff energy for the planewave basis set in eV.
+EDIFF  = 1E-8   # convergence condition for the electronic loop
+KPAR = 1        # no. of nodes (max. no. of k-points) 
+NCORE = 16      # no. of cores per node
+LWAVE = .FALSE. # Do not write WAVECAR
+GGA = PS        # use PBEsol potentials
+KSPACING = 0.1  # kmesh density, check to make sure enough k points
+KGAMMA = .TRUE.	# include gamma point
+
+# 1. Initial Structure Optimization
+#EDIFFG = 1E-8  # convergence criterion for ionic loops (pos=energy; neg=forces)
+#NSW = 1000     # number of ionic steps max
+#IBRION = 2     # ionic update:  2:Conjugate Gradient
+#ISIF = 3       # freedom: 2=ions; 4=ions,shape; 3=ions,shape,vol
+#ISMEAR = 1     # smearing: -5 (tetrahedron method) for insulators, 1 (Gaussian) for metals
+#SIGMA = 0.2    # smearing parameter
+
+# 2. Static electronic relaxation (tetrahedron method)
+#ISMEAR = -5
+#SIGMA = 0.05
+
+# DOS Calcuations
+#ICHARG = 11   # requires existing CHGCAR
+#NEDOS = 1001  # number of DOS gridpoints
+#LORBIT = 10   # DOSCAR and PROCAR are written
+#ISMEAR = -5   # use tetrahedron method
+#SIGMA = 0.05
+
+# Band Structure Calculations
+ICHARG = 11   # requires existing CHGCAR
+LORBIT = 10   # DOSCAR and PROCAR written
+ISMEAR = 0    # use Gaussian smearing
