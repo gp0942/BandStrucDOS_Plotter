@@ -12,3 +12,5 @@ Generally, the workflow to produce these files will look like this:
 4. Now that you have produced a converged CHGCAR, you will run two non-self consistent calculations with ICHARG = 11. The first one will generate the DOS. Leave ISMEAR = -5 and increase the k-point density to increase the fidelity of the DOS. When the calculation is done, save the resulting vasprun.xml file as vasprunDOS.xml
 5. The second ncf calculation will generate the band structure. Create a KPOINTS file containing the high symmetry points through the Brillouin Zone, either manually or by using a tool like vaspkit (example: https://www.vasp.at/wiki/index.php/KPOINTS). Change ISMEAR = 0, run the calculation, and save the resulting vasprun.xml file as vasprunBS.xml. 
 6. You are now ready to run this notebook. Copy the vasprunDOS.xml, vasprunBS.xml, and KPOINTS files to the working directory for this notebook.
+
+You can test this for a simple intermetallic system with the files given in PdAl_example/
