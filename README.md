@@ -1,5 +1,5 @@
-# BandStrucDOS_Plotter
-This workbook uses the pymatgen electronic_structure module to generate plots of the density of states and band structures from VASP output, specifically vasprun.xml files.This workbook was compiled in Jan. 23 by Gordon Peterson (Argonne National Lab, gpeterson@anl.gov) in Python 3.9.12 with Pymatgen 2022.11.7 (www.pymatgen.org). VASP5 was used for DFT calculations.
+# Band Structure and DOS Plotter 
+This Jupyter workbook uses the pymatgen electronic_structure module to generate plots of the density of states and band structures from VASP output, specifically vasprun.xml files.This workbook was compiled in Jan. 23 by Gordon Peterson (Argonne National Lab, gpeterson@anl.gov) in Python 3.9.12 with Pymatgen 2022.11.7 (www.pymatgen.org). VASP5 was used for DFT calculations.
 
 NOTE: You will need 2 distinct vasprun.xml files. 
 1. 'vasprunDOS.xml' should come from a ncf calculation (ICHARG = 11) on a gamma-centered kpoint grid (KSPACING = ...) using the tetrahedron method (ISMEAR = -5).
